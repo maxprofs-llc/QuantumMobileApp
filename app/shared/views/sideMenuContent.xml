@@ -1,0 +1,19 @@
+<ScrollView>
+  <StackLayout cssClass="qDrawerMenuContent">
+    <Label text="News" cssClass="qCategory" />
+    <Label cssClass="qUnderLine" horizontalAlignment="left" />
+    <Label text="All" class="qCategoryLink" tap="{{navigateToAllNews}}" />
+    <Label text="Design" class="qCategoryLink" tap="{{navigateToDesignNews}}"></Label>
+    <Label text="Marketing" class="qCategoryLink" tap="{{navigateToMarketingNews}}"></Label>
+    <Label text="Development" class="qCategoryLink" tap="{{navigateToDevNews}}"></Label>
+    <Label text="Blogs" cssClass="qCategory" />
+    <Label cssClass="qUnderLine" horizontalAlignment="left" />
+    <Label text="All" tap="{{navigateToAllBlogPosts}}" class="qCategoryLink"></Label>
+    <Label text="Design" tap="{{navigateToDesignBlogPosts}}" class="qCategoryLink"></Label>
+    <Label text="Marketing" tap="{{navigateToMarketingBlogPosts}}" class="qCategoryLink"></Label>
+    <Label text="Development" tap="{{navigateToDevBlogPosts}}" class="qCategoryLink"></Label>
+    <Label text="Whitepapers" cssClass="qCategory" />
+    <Label cssClass="qUnderLine" horizontalAlignment="left" />
+    <Label text="All" class="qCategoryLink" tap="{{navigateToPaidWhitePapers}}"></Label>
+  </StackLayout>
+</ScrollView>
