@@ -20,6 +20,16 @@ var Dev = "Development";
 function createViewModel() {
     var viewModel = new Observable();
 
+    // var array = [];
+    
+    // array.push(new Observable( { categoryUrl: "~/images/DesignCategory.png" } ));
+    // array.push(new Observable( { categoryUrl: "~/images/MarketingCategory.png" } ));
+    // array.push(new Observable( { categoryUrl: "~/images/DevelopmentCategory.png" } ));
+
+    // var categoryDataSource = new observableArrayModule.ObservableArray(array);
+
+    // viewModel.set("categoryDataSource", categoryDataSource);    
+
     return viewModel;
 }
 
