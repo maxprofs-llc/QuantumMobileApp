@@ -1,6 +1,6 @@
 <ActionBar class="qActionBar">
   <StackLayout orientation="horizontal">
-    <Image src="~/images/Logo.png" class="qLogo"></Image>
+    <Image src="~/images/Logo.png" class="qLogo" stretch="none"></Image>
   </StackLayout>
   <ActionItem tap="{{refreshInES}}"
       icon="~/images/ES.png" android.position="actionBar"/>
