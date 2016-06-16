@@ -3,14 +3,16 @@
     <rad:navBar></rad:navBar>
   <drawer:RadSideDrawer id="mainMenuSideDrawer">
     <drawer:RadSideDrawer.mainContent>
-        <StackLayout >
+        <StackLayout>
         <Label text="{{itemsTitle}}" horizontalAlignment="center" class="qItemsTitle" />
+        <Label cssClass="qUnderLineItems" horizontalAlignment="center" />
           <ListView items="{{ newsDataSource }}" itemTap="{{listViewItemTap}}" class="qListView">
             <ListView.itemTemplate>
               <GridLayout columns="*, 100" rows="*">
                 <StackLayout row="0" col="0">
                   <Label text="{{ Title }}" textWrap="true" class="qTitleList" />
                   <Label text="{{ PublicationDate | utcDateConverter('') }}" textWrap="true" class="qDateList" />
+                  <Label text="{{ Summary | summarySubstring('') }}" textWrap="true" class="qSummaryItem" />
                 </StackLayout>                
                 <Image row="0" col="1" src="{{ RelatedMedia }}" class="qListItemsImage" visibility="{{ RelatedMedia ? 'visible' : 'collapsed' }}" />
               </GridLayout>

@@ -25,6 +25,12 @@ var utcDateConverter = function (value, format) {
     return result.toUTCString();
 };
 
+var summarySubstring = function (value, format) {   
+
+
+    return value.substring(0, 140);
+}
+
 global.formatString = function(value, replacements) {
     var formatted = value;
     for (var i = 0; i < replacements.length; i++) {
@@ -147,5 +153,7 @@ global.DevelopmentCategoryId = null;
 
 application.resources["utcDateConverter"] = utcDateConverter;
 application.resources["utcDotNetDateConverter"] = utcDotNetDateConverter;
+
+application.resources["summarySubstring"] = summarySubstring;
 
 application.start({ moduleName: "main-page" });
