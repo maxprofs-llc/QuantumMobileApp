@@ -6,6 +6,7 @@ var http = require("http");
 
 function createViewModel() {
     var viewModel = new Observable();
+    viewModel.set("isEngLang", isEngLang);
 
     viewModel.getAllItems = function () {
         var url = viewModel.resolveServiceURL();
@@ -33,14 +34,21 @@ function createViewModel() {
     };
 
     viewModel.refreshInES = function () {
-        viewModel.refreshUI("ES");
+        if(isEngLang) {
+            viewModel.refreshUI("ES");
+        }
     };
 
     viewModel.refreshInEN = function () {
-        viewModel.refreshUI("EN");
+        if(!isEngLang) {
+            viewModel.refreshUI("EN");
+        }
     };
 
     viewModel.refreshUI = function (lang) {
+        isEngLang = !isEngLang;
+        viewModel.set("isEngLang", isEngLang);
+
         LANG = lang;
         viewModel.getAllItems();
     };

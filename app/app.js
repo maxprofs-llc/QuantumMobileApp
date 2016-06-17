@@ -28,7 +28,7 @@ var utcDateConverter = function (value, format) {
 var summarySubstring = function (value, format) {   
 
 
-    return value.substring(0, 140);
+    return value.substring(0, 100);
 }
 
 global.formatString = function(value, replacements) {
@@ -136,7 +136,7 @@ global.WhitePapersServicePath = "api/quantum-mobile/documents";
 
 
 //http://localhost:89/api/mycustomservice/newsitems(eb57052e-9a43-66a7-8579-ff00003bc1d1)?$select=Title,Content,PublicationDate&sf_culture=es
-global.NewsItemServicePath = "api/quantum-mobile/newsitems({0})?$select=Title,Content,PublicationDate,RelatedMedia&sf_culture={1}";
+global.NewsItemServicePath = "api/quantum-mobile/newsitems({0})?$select=Title,Content,PublicationDate,Author,RelatedMedia&sf_culture={1}";
 //global.NewsItemServicePath = "api/mycustomservice/blogposts({0})?$select=Title,Content,PublicationDate&sf_culture={1}";
 global.BlogServicePath = "api/quantum-mobile/blogposts({0})?$select=Title,Content,PublicationDate&sf_culture={1}";
 
@@ -149,6 +149,7 @@ global.TOKEN = null;
 global.DesignCategoryId = null;
 global.MarketingCategoryId = null;
 global.DevelopmentCategoryId = null;
+global.isEngLang = true;
 
 
 application.resources["utcDateConverter"] = utcDateConverter;

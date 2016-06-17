@@ -3,9 +3,9 @@
     <Image src="~/images/Logo.png" class="qLogo" stretch="none"></Image>
   </StackLayout>
   <ActionItem tap="{{refreshInES}}"
-      icon="~/images/ES.png" android.position="actionBar"/>
+      icon="{{isEngLang ? '~/images/ES-IN.png' : '~/images/ES.png'  }}" android.position="actionBar"/>
   <ActionItem tap="{{refreshInEN}}"
-  icon="~/images/EN.png" android.position="actionBar"/>
+  icon="{{isEngLang ? '~/images/EN.png' : '~/images/EN-IN.png'  }}" android.position="actionBar"/>
   <ActionItem tap="{{showMenu}}"
   icon="~/images/Menu.png" android.position="actionBar"/>
 </ActionBar>

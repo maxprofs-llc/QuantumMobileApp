@@ -7,11 +7,13 @@
       <Label text="White Papers" horizontalAlignment="center" class="qItemsTitle" />
         <ListView items="{{ whitePapersDataSource }}" itemTap="{{listViewItemTap}}" class="qListView">
           <ListView.itemTemplate>
-            <StackLayout>
-              <Label text="{{ Title }}" textWrap="true" class="qTitleList" />
-              <Label text="{{ PublicationDate | utcDateConverter('') }}" textWrap="true" class="qDateList" />
-              <!--<Image src="{{ RelatedMedia }}" class="qListItemsImage" visibility="{{ RelatedMedia ? 'visible' : 'collapsed' }}" />-->
-            </StackLayout>
+              <GridLayout columns="*, 40" rows="*">
+                <StackLayout row="0" col="0">
+                  <Label text="{{ Title }}" textWrap="true" class="qTitleList" />
+                  <Label text="{{ PublicationDate | utcDateConverter('') }}" textWrap="true" class="qDateList" />
+                </StackLayout>                
+                <Image row="0" col="1" src="~/images/Unlocked.png" class="qWhitePaperImage" />
+              </GridLayout>
           </ListView.itemTemplate>
         </ListView>
       </StackLayout>

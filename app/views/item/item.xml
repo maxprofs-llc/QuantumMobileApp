@@ -4,10 +4,11 @@
   <drawer:RadSideDrawer id="mainMenuSideDrawer">
     <drawer:RadSideDrawer.mainContent>
         <StackLayout >
-          <Label text="{{ title }}" textWrap="true" class="qTitleList" />
+          <Label text="{{ title }}" textWrap="true" class="qItemTitle" />
+          <Label text="{{'Author: ' + author }}" textWrap="true" class="qItemAuthor" visibility="{{ author ? 'visible' : 'collapsed' }}" />
           <Label text="{{ publicationDate | utcDateConverter('') }}" textWrap="true" class="qDateList" />
-          <Image src="{{ relatedMedia }}" class="qListItemsImage" visibility="{{ relatedMedia ? 'visible' : 'collapsed' }}" />
-          <HtmlView  html="{{ content }}" />
+          <Image src="{{ relatedMedia ? relatedMedia: '~/images/Blog.png' }}" class="qItemImage"  />
+          <HtmlView  html="{{ content }}" class="qItemHtmlView" />
         </StackLayout>
     </drawer:RadSideDrawer.mainContent>
     <drawer:RadSideDrawer.drawerContent >
