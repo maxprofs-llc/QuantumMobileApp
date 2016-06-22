@@ -106,6 +106,7 @@ global.extendModelWithNatigation = function (viewModel, page) {
             animated: false
         };
 
+        //Uncomment the following to code to persist the TOKEN and avoid login after the first time
         //if (TOKEN == null) {
             navigationEntry.moduleName = "views/login/login";
         //} else {
@@ -114,26 +115,39 @@ global.extendModelWithNatigation = function (viewModel, page) {
 
         frames.topmost().navigate(navigationEntry);
     }
+    
+    viewModel.set("isEngLang", isEngLang);   
+
+    viewModel.set("newsEN", "News");
+    viewModel.set("blogsEN", "Blogs");
+    viewModel.set("whitePapersEN", "Whitepapers");
+
+    viewModel.set("designEN", "Design");
+    viewModel.set("marketingEN", "Marketing");
+    viewModel.set("developmentEN", "Development");
+
+    viewModel.set("newsES", "NOTICIAS");
+    viewModel.set("blogsES", "Blog");
+    viewModel.set("whitePapersES", "Libros Blancos ");
+
+    viewModel.set("designES", "Diseño web");
+    viewModel.set("marketingES", "Márketing");
+    viewModel.set("developmentES", "Desarrollo"); 
+
 
     return viewModel;
 }
 
-
+//This is the localhost endpoint
 //global.ServiceEndPoint = "http://10.0.3.2:89/";
+
 global.ServiceEndPoint = "http://192.168.152.142:4774/";
 global.ServiceEndPointWS = "http://192.168.152.142:4774";
 
-
-//global.NewsItemsServicePath = "CustomServices/ItemsService/GetNews/";
 global.NewsItemsServicePath = "api/quantum-mobile/newsitems";
-
-//global.BlogsServicePath = "CustomServices/ItemsService/GetBlogPosts/";
 global.BlogsServicePath = "api/quantum-mobile/blogposts";
-
 global.LogInServicePath = "api/quantum-mobile/login";
-
 global.WhitePapersServicePath = "api/quantum-mobile/documents";
-
 
 //http://localhost:89/api/mycustomservice/newsitems(eb57052e-9a43-66a7-8579-ff00003bc1d1)?$select=Title,Content,PublicationDate&sf_culture=es
 global.NewsItemServicePath = "api/quantum-mobile/newsitems({0})?$select=Title,Content,PublicationDate,Author,RelatedMedia&sf_culture={1}";
