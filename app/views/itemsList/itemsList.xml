@@ -1,5 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
-      xmlns:rad="shared/views" xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer" navigatingTo="onNavigatingTo">
+      xmlns:rad="shared/views" xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
+      xmlns:IC="nativescript-web-image-cache"
+      navigatingTo="onNavigatingTo">
     <rad:navBar></rad:navBar>
   <drawer:RadSideDrawer id="mainMenuSideDrawer">
     <drawer:RadSideDrawer.mainContent>
@@ -14,7 +16,8 @@
                   <Label text="{{ PublicationDate | utcDateConverter('') }}" textWrap="true" class="qDateList" />
                   <Label text="{{ Summary | summarySubstring('') }}" textWrap="true" class="qSummaryItem" />
                 </StackLayout>                
-                <Image row="0" col="1" src="{{ RelatedMedia ? RelatedMedia : '~/images/Blog.png'  }}" class="qListItemsImage" />
+                <IC:WebImage row="0" col="1"  id="imageId" src="{{ RelatedMedia ? RelatedMedia : '~/images/Blog.png'  }}" class="qListItemsImage">
+                </IC:WebImage>   
               </GridLayout>
             </ListView.itemTemplate>
           </ListView>

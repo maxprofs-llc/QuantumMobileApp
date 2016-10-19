@@ -11,8 +11,6 @@ function createViewModel() {
     viewModel.getAllItems = function () {
         var url = viewModel.resolveServiceURL();
 
-        //console.log("===" + url + "===");
-
         http.request({ url: url, method: "GET" }).then(function (response) {
             //http://10.0.2.2:89 or http://10.0.3.2:89 is your localhost because of the VM and the emulator
             //E.g. http://10.0.3.2:89/api/mycustomservice/newsitems?$select=Id,Title,PublicationDate

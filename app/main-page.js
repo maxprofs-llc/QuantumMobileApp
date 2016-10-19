@@ -9,7 +9,7 @@ function onNavigatingTo(args) {
 
 function onLoaded() {
     //http://bivanova:4774/api/quantum-mobile/hierarchy-taxa
-    debugger;
+
     var url = ServiceEndPoint + HierarchyTaxaPath;
 
     http.request({ url: url, method: "GET" }).then(function (response) {
