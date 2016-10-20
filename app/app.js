@@ -148,10 +148,8 @@ global.extendModelWithNatigation = function (viewModel, page) {
 //This is the localhost endpoint
 //global.ServiceEndPoint = "http://10.0.3.2:89/";
 
-// global.ServiceEndPoint = "http://192.168.152.142:4774/";
-// global.ServiceEndPointWS = "http://192.168.152.142:4774";
 global.ServiceEndPoint = "http://10.0.3.2:82/";
-global.ServiceEndPointWS = "http://10.0.3.2:82";
+global.ServiceEndPointWS = "http://10.0.3.2:82"; //this is the ServiceEndPoint without the slash
 
 global.NewsItemsServicePath = "api/quantum-mobile/newsitems";
 global.BlogsServicePath = "api/quantum-mobile/blogposts";
