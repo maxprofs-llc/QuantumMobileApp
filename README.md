@@ -5,9 +5,9 @@ Integration with the Quantum web site
 
 ## Install NativeScript by following the steps from here https://docs.nativescript.org/start/ns-setup-win
 
-## Host the Qantum app on your IIS
+## Host the Qantum website on your IIS
 
-## Open the app.js file and configure the endpoints
+## Open the app.js file of the mobile app and configure the endpoints
 global.ServiceEndPoint = "http://192.168.152.142:4774/"; //should point to your localhost 
 
 global.ServiceEndPointWS = "http://192.168.152.142:4774"; //the same address like the above without the slash
